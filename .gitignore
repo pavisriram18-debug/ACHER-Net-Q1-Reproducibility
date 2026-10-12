@@ -1,0 +1,38 @@
+# Python cache and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local editor settings
+.vscode/
+
+# Datasets and local data
+data/
+datasets/
+processed/
+validation/
+*.csv
+*.xlsx
+*.npy
+*.npz
+*.fits
+*.gz
+*.zip
+
+# Generated models and outputs
+outputs/
+artifacts/
+models/
+*.joblib
+*.pkl
+*.pickle
+
+# Logs
+*.log
