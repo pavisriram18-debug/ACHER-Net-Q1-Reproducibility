@@ -101,3 +101,18 @@ python .\ACHER_Net_authoritative_sequential_q1.py --manifest ".\path\to\authorit
 Keep the published Q1 evidence centered on the frozen 2024 observations with corresponding 2025 outcomes.
 
 A current 2026 data layer may be described as a prospective update/readiness layer, but it is not an annual 2026 outcome evaluation and it must not be used to create an unsupported 2025→2026 performance claim.
+## Prerequisites and Data Availability
+
+The repository contains the core ACHER-Net Q1 source code and execution instructions. The processed research datasets and intermediate artifacts are not included in this public repository.
+
+Running the scripts requires the corresponding local project artifacts, including:
+
+- The authoritative Step-129 next-year target dataset.
+- The Step-134 Q1 feature-and-target matrix.
+- The upstream hazard-state and temporal feature datasets.
+- The temporal-learning matrix and required feature-contract CSV.
+- The Step-237 M5 optimization summary required by the sequential evaluation.
+
+Place the required artifacts in the paths specified by the scripts before execution. Install the Python dependencies using `pip install -r requirements.txt`.
+
+The authoritative predictive target is `NEXT_YEAR_HIGHER_HAZARD_STATE`. The older target `EMERGING_HAZARD_NEXT_YEAR` is not used as a substitute for the Q1 target.
