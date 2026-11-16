@@ -59,19 +59,45 @@ Install the project's pinned dependencies from its root `requirements.txt` befor
 
 ## 5. Execution sequence
 
-Run the original evaluation stages from the ACHER-NET project root after restoring the authorized local data prerequisites:
+The original evaluation scripts require the full authorized ACHER-NET project artifacts. Run Steps 308?311 from the full project root, not from a documentation-only clone.
 
-1. `python scripts/step308_step237_final_m5_regime_evaluation.py`
-2. `python scripts/step309r_correct_mcc_bootstrap.py`
-3. `python scripts/step310_correct_f1_bootstrap.py`
-4. `python scripts/step311_final_evidence_consolidation.py`
+The following PowerShell sequence shows the required environment variables and output directories. Restore the local data prerequisites before executing it.
 
-The Step312 reproduction helper runs against the consolidated aggregate CSV in this release:
+```powershell
+$root = (Get-Location).Path
+
+$step308 = Join-Path $root "data\processed\validation\acher_net_q1_final\step237_final_m5_regime_evaluation_20261116"
+$step309 = Join-Path $root "data\processed\validation\acher_net_q1_final\step237_MCC_BOOTSTRAP_CORRECTED_20261116"
+$step310 = Join-Path $root "data\processed\validation\acher_net_q1_final\step237_F1_BOOTSTRAP_CORRECTED_20261116"
+$step311 = Join-Path $root "data\processed\validation\acher_net_q1_final\step237_FINAL_REGIME_EVIDENCE_LOCKED_20261116"
+
+python .\scripts\step308_step237_final_m5_regime_evaluation.py
+if ($LASTEXITCODE -ne 0) { throw "Step308 failed." }
+
+$env:S309_ROOT = $root
+python .\scripts\step309r_correct_mcc_bootstrap.py
+if ($LASTEXITCODE -ne 0) { throw "Step309R failed." }
+
+$env:S310_ROOT = $root
+$env:S310_OUT = $step310
+python .\scripts\step310_correct_f1_bootstrap.py
+if ($LASTEXITCODE -ne 0) { throw "Step310 failed." }
+
+$env:S311_ROOT = $root
+$env:S311_STEP308 = $step308
+$env:S311_STEP309 = $step309
+$env:S311_STEP310 = $step310
+$env:S311_OUT = $step311
+
+python .\scripts\step311_final_evidence_consolidation.py
+if ($LASTEXITCODE -ne 0) { throw "Step311 failed." }
+```
+
+The post-hoc Step312 reproduction helper can be run from the repository root containing this release:
 
 `python scripts/reproduce_step312_pvalue_reporting.py`
 
-It writes a separately named `*_pvalues_reproduced.csv` file and a reproduction manifest. It does not overwrite the historical Step312 output.
-
+It writes a separately named reproduced CSV and manifest. It is not the original Step312 execution source and does not overwrite the historical Step312 output.
 ## 6. Interpretation boundaries
 
 - The test period is assessment year 2024 with corresponding 2025 outcomes; do not describe this as two separate test-year cohorts.
