@@ -1,0 +1,28 @@
+{
+  "experiment": "Step237_Final_M5_F1_Bootstrap_Correction",
+  "created_utc": "2026-11-16T08:27:53.228249+00:00",
+  "source_fast_script_sha256": "778c2ac30c7a56d264c39f19824033c0277d6f6221025c9d035b32d4e09185d9",
+  "step308_assignments_sha256": "9fddb1e3a4c1c5d06dac338ca5546e1fbfd09e29ba985a45363039957956b9ee",
+  "step308_bootstrap_sha256": "ecd126cf123b647c71a6ee37b5e009163941fc5ddc530588317b520d7f6e47e5",
+  "step309_corrected_mcc_sha256": "2560e92f7b2e11589bfe79bd8a3309dbde3ecf55549b65aba6f837d313b46ccc",
+  "corrections": {
+    "PR_AUC": "Zero-weight score groups handled safely.",
+    "F1": "All bootstrap samples included; zero denominator maps to F1=0, matching sklearn zero_division=0.",
+    "MCC": "Zero denominator maps to MCC=0 when both target classes are represented."
+  },
+  "bootstrap_replicates": 2000,
+  "base_seed": 20260902,
+  "HGB_threshold": 0.125,
+  "M5_threshold": 0.855,
+  "F1_valid_replicates_min": 2000,
+  "F1_valid_replicates_max": 2000,
+  "weighted_f1_max_abs_error_vs_sklearn": 0.0,
+  "adaptation_eligible_regimes": 0,
+  "original_fast_script_unchanged": true,
+  "step308_files_unchanged": true,
+  "step309_files_unchanged": true,
+  "outputs": {
+    "step237_f1_bootstrap_corrected.csv": "d6d30e2ef17071c9755d8c75cf7d27589437b3f4804678742021b7d0e55f24d7",
+    "step237_final_three_metric_gate_corrected.csv": "5dfd20012344dd14d0155fc4e0832e72663cfc876851add2bdb5ec6fc11a660f"
+  }
+}

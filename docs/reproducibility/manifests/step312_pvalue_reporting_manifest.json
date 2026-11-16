@@ -1,0 +1,14 @@
+{
+  "experiment": "Step237_Final_Regime_Bootstrap_PValue_Reporting",
+  "created_utc": "2026-11-16T08:43:42.565701+00:00",
+  "input_file": "step237_final_regime_bootstrap_corrected_locked.csv",
+  "input_sha256": "361f8c409595001e3bceae3acbcd46e36e34a6805e2deeccb9663811976b8da6",
+  "output_file": "step237_final_regime_bootstrap_corrected_locked_pvalues.csv",
+  "output_sha256": "ad2170628fa2e351841076a7000c48d03c0bfd96fbbb787c49004f0c61566a7a",
+  "rows": 48,
+  "replicate_denominator": "row-specific valid_bootstrap",
+  "p_value_formula": "min(1, (p_two_sided * valid_bootstrap + 2) / (valid_bootstrap + 1))",
+  "confidence_intervals_changed": false,
+  "point_estimates_changed": false,
+  "adaptation_gate_changed": false
+}

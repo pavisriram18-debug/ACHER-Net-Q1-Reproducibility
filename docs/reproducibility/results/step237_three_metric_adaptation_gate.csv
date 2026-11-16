@@ -1,0 +1,13 @@
+regime_family,regime,F1_eligible,MCC_eligible,PR_AUC_eligible,ALL_THREE_ELIGIBLE
+extremeness_quartile,EXT_Q1,False,False,False,False
+extremeness_quartile,EXT_Q2,False,False,False,False
+extremeness_quartile,EXT_Q3,False,False,False,False
+extremeness_quartile,EXT_Q4,False,False,False,False
+missingness_extremeness_2x2,MISS_HIGH_EXT_HIGH,False,False,False,False
+missingness_extremeness_2x2,MISS_HIGH_EXT_LOW,False,False,False,False
+missingness_extremeness_2x2,MISS_LOW_EXT_HIGH,False,False,False,False
+missingness_extremeness_2x2,MISS_LOW_EXT_LOW,False,False,False,False
+missingness_quartile,MISS_Q1,False,False,False,False
+missingness_quartile,MISS_Q2,False,False,False,False
+missingness_quartile,MISS_Q3,False,False,False,False
+missingness_quartile,MISS_Q4,False,False,False,False
