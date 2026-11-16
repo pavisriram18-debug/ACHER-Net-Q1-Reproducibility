@@ -59,7 +59,7 @@ Install the project's pinned dependencies from its root `requirements.txt` befor
 
 ## 5. Execution sequence
 
-The original evaluation scripts require the full authorized ACHER-NET project artifacts. Run Steps 308?311 from the full project root, not from a documentation-only clone.
+The original evaluation scripts require the full authorized ACHER-NET project artifacts. Run Steps 308-311 from the full project root, not from a documentation-only clone.
 
 The following PowerShell sequence shows the required environment variables and output directories. Restore the local data prerequisites before executing it.
 
