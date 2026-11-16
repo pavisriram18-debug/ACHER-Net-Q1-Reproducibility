@@ -1,0 +1,19 @@
+ACHER-Net Step237 Final Regime Evidence
+Evaluation population: 2024 frozen test, N=46,622, positives=1,173.
+Comparator: Step151 HGB, threshold 0.125.
+Final model: Step237 M5_ACHER_SAGE, threshold 0.855.
+Regime cutpoints: original development-only 2020-2022 definitions.
+
+The final bootstrap CSV combines:
+- Balanced accuracy: original Step308 implementation; one-class target resamples are invalid.
+- F1: Step310 corrected implementation; all resamples are included with zero_division=0.
+- MCC: Step309 corrected implementation; zero prediction denominator maps to MCC=0 when both target classes are present; single-class target samples remain invalid.
+- PR-AUC: Step308 implementation with zero-weight score groups safely handled; single-class target samples remain invalid.
+
+All corrected bootstrap analyses use 2,000 replicates and the original deterministic regime-specific seeds.
+Original scripts, Step308 outputs, Step309 outputs, Step310 outputs, and source Parquet files are preserved.
+
+The three-metric adaptation gate requires positive observed differences and 95% percentile-bootstrap lower bounds above zero for F1, MCC, and PR-AUC simultaneously.
+Zero raw bootstrap tail estimates are Monte Carlo boundary values, not literal zero probabilities. Prefer the add-one estimate in p_two_sided_plus_one. Confidence intervals are the primary gate evidence.
+
+This is a supplementary final-Step237 regime evaluation, not a replacement of historical Step151 E6.4R/E6.5 artifacts.

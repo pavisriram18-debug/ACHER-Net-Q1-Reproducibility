@@ -1,0 +1,48 @@
+{
+  "experiment": "Step237_Final_M5_Regime_Evaluation",
+  "created_utc": "2026-11-16T08:12:26.915178+00:00",
+  "evaluation_year": 2024,
+  "rows": 46622,
+  "positive_cases": 1173,
+  "negative_cases": 45449,
+  "selected_feature_count": 108,
+  "development_years": [
+    2020,
+    2021,
+    2022
+  ],
+  "validation_year": 2023,
+  "HGB_model": "HGB_Step151",
+  "M5_model": "M5_ACHER_SAGE_Step237",
+  "HGB_threshold": 0.125,
+  "M5_threshold": 0.855,
+  "bootstrap_replicates": 2000,
+  "base_seed": 20260902,
+  "regime_specific_seed_digest_characters": 8,
+  "comparison": "Final Step237 M5 minus incumbent Step151 HGB",
+  "alignment": {
+    "Step151_to_Step237_raw_ID_year_matches": 46622,
+    "unmatched": 0,
+    "target_label_mismatches": 0,
+    "Step134_to_prediction_alignment": "original occurrence-based function",
+    "regime_counts_match_original_E6.4R": true
+  },
+  "PR_AUC_correction": "Zero cumulative bootstrap score-group weights are handled using numpy.divide with where=cumulative_weight > 0.",
+  "no_retraining": true,
+  "no_threshold_tuning": true,
+  "regime_cutpoints_source": "Development years 2020-2022 only",
+  "input_sha256": {
+    "scripts/279R_acher_net_q1_e64r_conditional_adaptation_benefit_locked855.py": "36959eda78ff8a231aacfbc55c93e0202cc77216f19656ba10e6a258461fa815",
+    "scripts/279R_fast_acher_net_q1_e64r_conditional_adaptation_benefit_locked855.py": "778c2ac30c7a56d264c39f19824033c0277d6f6221025c9d035b32d4e09185d9",
+    "data/processed/validation/acher_net_q1_statistical/step151_paired_hgb_m5_test_predictions.parquet": "62368701e07606fc00fe072d036a19a29a19c6a09bec2656435251e4e849fd9a",
+    "data/processed/validation/acher_net_q1_acher_sage/final_step237_acher_sage_optimization/step237_final_m0_m5_test_predictions.parquet": "2a35f4f175f2a5de5cf3d8408cde463f3b0c20ef305ed5e72d33b90360342181"
+  },
+  "outputs": {
+    "step237_regime_metrics.csv": "8d9d3a0f580c42fa5f32fcd58fc7227b824dea6e4a01928562895f16e349022c",
+    "step237_pairwise_bootstrap.csv": "ecd126cf123b647c71a6ee37b5e009163941fc5ddc530588317b520d7f6e47e5",
+    "step237_final_m5_regime_assignments.parquet": "9fddb1e3a4c1c5d06dac338ca5546e1fbfd09e29ba985a45363039957956b9ee",
+    "step237_global_metrics.csv": "e6fe1da3b1ae818b37498e5a6b63abb2e760166b480ce274f5afae4b38cdc01e",
+    "step237_three_metric_adaptation_gate.csv": "dd68f86c77d7cdadef2b62f6f5c5a9bcf4bfe1051e20c7706ddaaaff53f724d5"
+  },
+  "adaptation_eligible_regimes": 0
+}

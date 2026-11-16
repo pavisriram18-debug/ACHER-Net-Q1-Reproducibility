@@ -1,0 +1,46 @@
+{
+  "experiment": "Step237_Final_Regime_Evidence_Locked",
+  "created_utc": "2026-11-16T08:36:10.432426+00:00",
+  "evaluation_year": 2024,
+  "n": 46622,
+  "positives": 1173,
+  "negative_cases": 45449,
+  "HGB_threshold": 0.125,
+  "M5_threshold": 0.855,
+  "bootstrap_replicates": 2000,
+  "base_seed": 20260902,
+  "regime_count": 12,
+  "metric_comparison_count": 48,
+  "bootstrap_comparison_count": 48,
+  "corrected_metric_sources": {
+    "balanced_accuracy": "Step308 original valid one-class rejection",
+    "f1": "Step310 corrected; zero_division=0",
+    "mcc": "Step309 corrected; sklearn zero-denominator convention",
+    "pr_auc": "Step308 corrected zero-weight score groups"
+  },
+  "five_positive_regime_validation": {
+    "regime": "MISS_HIGH_EXT_LOW",
+    "n": 7647,
+    "positives": 5,
+    "no_positive_resamples": 13,
+    "all_positive_resamples": 0,
+    "max_weighted_f1_error_vs_sklearn": 0.0
+  },
+  "adaptation_eligible_regimes": 0,
+  "decision": "RETAIN_HGB; no conditional regime qualifies for adaptation",
+  "raw_zero_p_value_handling": "add-one Monte Carlo reporting column included",
+  "inputs": {
+    "data/processed/validation/acher_net_q1_final/step237_final_m5_regime_evaluation_20261116/step237_final_m5_regime_assignments.parquet": "9fddb1e3a4c1c5d06dac338ca5546e1fbfd09e29ba985a45363039957956b9ee",
+    "data/processed/validation/acher_net_q1_final/step237_final_m5_regime_evaluation_20261116/step237_regime_metrics.csv": "8d9d3a0f580c42fa5f32fcd58fc7227b824dea6e4a01928562895f16e349022c",
+    "data/processed/validation/acher_net_q1_final/step237_final_m5_regime_evaluation_20261116/step237_pairwise_bootstrap.csv": "ecd126cf123b647c71a6ee37b5e009163941fc5ddc530588317b520d7f6e47e5",
+    "data/processed/validation/acher_net_q1_final/step237_F1_BOOTSTRAP_CORRECTED_20261116/step237_f1_bootstrap_corrected.csv": "d6d30e2ef17071c9755d8c75cf7d27589437b3f4804678742021b7d0e55f24d7",
+    "data/processed/validation/acher_net_q1_final/step237_MCC_BOOTSTRAP_CORRECTED_20261116/step237_mcc_bootstrap_corrected.csv": "2560e92f7b2e11589bfe79bd8a3309dbde3ecf55549b65aba6f837d313b46ccc",
+    "data/processed/validation/acher_net_q1_final/step237_F1_BOOTSTRAP_CORRECTED_20261116/step237_final_three_metric_gate_corrected.csv": "5dfd20012344dd14d0155fc4e0832e72663cfc876851add2bdb5ec6fc11a660f"
+  },
+  "outputs": {
+    "step237_final_regime_metrics_locked.csv": "690ba8005b1a4f561aec19ac444cebd394aca69647cf6284eee68e3083e51d9c",
+    "step237_final_regime_bootstrap_corrected_locked.csv": "361f8c409595001e3bceae3acbcd46e36e34a6805e2deeccb9663811976b8da6",
+    "step237_final_adaptation_gate_locked.csv": "99889aa916c1c57ebc52c4447ddf309e27b13f3c8ac50d819fd569844b5a68fa",
+    "STEP311_EVIDENCE_NOTES.txt": "c48e08016e2cc922339890298ae431638fe706eb4f6464fb06b0e19db22a630b"
+  }
+}

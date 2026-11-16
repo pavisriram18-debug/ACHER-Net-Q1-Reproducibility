@@ -1,0 +1,23 @@
+{
+  "experiment": "Step237_Final_M5_MCC_Bootstrap_Correction",
+  "created_utc": "2026-11-16T08:19:33.488088+00:00",
+  "source_fast_script_sha256": "778c2ac30c7a56d264c39f19824033c0277d6f6221025c9d035b32d4e09185d9",
+  "step308_assignments_sha256": "9fddb1e3a4c1c5d06dac338ca5546e1fbfd09e29ba985a45363039957956b9ee",
+  "step308_bootstrap_sha256": "ecd126cf123b647c71a6ee37b5e009163941fc5ddc530588317b520d7f6e47e5",
+  "PR_AUC_correction": "Zero-weight cumulative score groups handled safely.",
+  "MCC_correction": "Zero MCC denominator maps to 0 when both target classes are present, matching sklearn.",
+  "bootstrap_replicates": 2000,
+  "base_seed": 20260902,
+  "HGB_threshold": 0.125,
+  "M5_threshold": 0.855,
+  "weighted_mcc_max_abs_error_vs_sklearn": 0.0,
+  "mcc_valid_min": 1989,
+  "mcc_valid_max": 2000,
+  "adaptation_eligible_regimes": 0,
+  "original_source_unchanged": true,
+  "step308_files_unchanged": true,
+  "outputs": {
+    "step237_mcc_bootstrap_corrected.csv": "2560e92f7b2e11589bfe79bd8a3309dbde3ecf55549b65aba6f837d313b46ccc",
+    "step237_final_three_metric_gate_corrected.csv": "f605f3b4a76e1118a61efe878b5e07df7ef1c03d31b1551dd91c75bcc77672fc"
+  }
+}
